@@ -1,0 +1,1 @@
+# hamma-beads-loja-
