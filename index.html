@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cannu Fuse Beads — Loja &amp; Estúdio de Contas Termofusíveis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@400..700&display=swap" rel="stylesheet">
+<meta name="description" content="Cannu Fuse Beads: loja e estúdio de pixel art com contas termofusíveis Mini 2,6 mm. Designs autorais, feitos sob encomenda.">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  :root {
+    color-scheme: light;
+    --background: #f2f5ec;
+    --surface-low: #ebf0e5;
+    --surface: #e4ebdd;
+    --surface-high: #dae3d1;
+    --card: #fafcf7;
+    --ink: #1a2416;
+    --ink-var: #4a5445;
+    --outline: #1a2416;
+    --outline-var: #c8d4c0;
+    --primary: #225c36;
+    --on-primary: #ffffff;
+    --primary-container: #b8e986;
+    --on-primary-container: #1a2416;
+    --secondary: #e07856;
+    --tertiary: #2a9d8f;
+    --on-tertiary: #ffffff;
+    --gold: #e8c547;
+    --positive: #1f6e3a;
+    --on-positive: #ffffff;
+    --warning: #a67700;
+    --focus: #225c36;
+    --font-headline: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --rounded: 0.125rem;
+    --border-thick: 3px solid var(--outline);
+    --border-medium: 2px solid var(--outline);
+    --border-light: 1px solid var(--outline-var);
+    --shadow: 5px 5px 0 var(--outline);
+    --shadow-sm: 3px 3px 0 var(--outline);
+    --rule-heavy: 6px solid var(--outline);
+    --space-xs: 0.25rem; --space-sm: 0.5rem; --space-md: 1rem;
+    --space-lg: 1.5rem; --space-xl: 2.5rem; --space-2xl: 4rem; --space-3xl: 6rem;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --dur-micro: 120ms; --dur-short: 220ms;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { overflow-x: clip; margin:0; padding:0; background: var(--background);
+    color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55;
+    scroll-behavior: smooth; }
+  header { position: static !important; }
+  img, svg, canvas { display: block; max-width: 100%; }
+  button, input, select, textarea { font-family: inherit; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+  .app-shell { max-width: 1280px; margin: 0 auto; padding: var(--space-md) var(--space-lg) var(--space-3xl); }
+  .app-shell * { min-width: 0; }
+
+  /* Header */
+  .site-header { border-bottom: var(--rule-heavy); background: var(--surface-low);
+    padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-xl); }
+  .header-inner { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: space-between; gap: var(--space-md); }
+  .brand-link { display: inline-flex; align-items: center; gap: var(--space-sm);
+    text-decoration: none; color: var(--ink); }
+  .brand-mark { border: var(--border-thick); box-shadow: var(--shadow-sm);
+    background: var(--primary-container); padding: var(--space-xs); width: 48px; height: 48px;
+    display: grid; place-items: center; flex-shrink: 0; }
+  .brand-name { font-family: var(--font-headline); font-weight: 700; font-size: 1.25rem;
+    letter-spacing: -0.02em; line-height: 1.05; text-transform: uppercase; display: block; }
+  .brand-sub { font-family: var(--font-headline); font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-var); display: block; }
+  .main-nav { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-xs); }
+  .nav-link { font-family: var(--font-headline); font-size: 0.75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; color: var(--ink);
+    padding: var(--space-sm); border: 2px solid transparent; min-height: 44px;
+    display: inline-flex; align-items: center;
+    transition: background-color var(--dur-micro) var(--ease-out); }
+  .nav-link:hover { background: var(--primary-container); border-color: var(--outline); }
+  .header-actions { display: flex; align-items: center; gap: var(--space-sm); }
+  .cart-trigger { display: inline-flex; align-items: center; gap: var(--space-sm);
+    min-height: 44px; padding: var(--space-xs) var(--space-md);
+    background: var(--primary-container); color: var(--on-primary-container);
+    border: var(--border-thick); box-shadow: var(--shadow-sm);
+    font-family: var(--font-headline); font-weight: 700; font-size: 0.75rem;
+    text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer;
+    transition: transform var(--dur-micro), background-color var(--dur-micro); }
+  .cart-trigger:hover { background: var(--primary); color: var(--on-primary);
+    transform: translate(-1px, -1px); }
+  .cart-badge-count { background: var(--primary); color: var(--on-primary);
+    padding: 2px 6px; font-variant-numeric: tabular-nums; }
+  .cart-trigger:hover .cart-badge-count { background: var(--primary-container);
+    color: var(--on-primary-container); }
+  .mobile-menu-btn { display: none; min-width: 44px; min-height: 44px;
+    align-items: center; justify-content: center; background: var(--card);
+    border: var(--border-thick); box-shadow: var(--shadow-sm); cursor: pointer; color: var(--ink); }
+
+  /* Hero */
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    gap: var(--space-lg); margin-bottom: var(--space-2xl); }
+  .hero-main { border: var(--border-thick); box-shadow: var(--shadow);
+    background: var(--surface-low); padding: var(--space-xl);
+    display: flex; flex-direction: column; gap: var(--space-lg); justify-content: space-between; }
+  .kicker { display: inline-block; align-self: flex-start; font-family: var(--font-headline);
+    font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+    background: var(--primary); color: var(--on-primary);
+    padding: var(--space-xs) var(--space-sm); }
+  .kicker--yellow { background: var(--primary-container); color: var(--on-primary-container);
+    border: var(--border-medium); }
+  .kicker--blue { background: var(--tertiary); color: var(--on-tertiary); }
+  .display-title { font-family: var(--font-headline); font-weight: 700;
+    font-size: clamp(2.125rem, 1.5rem + 2.8vw, 3.75rem); line-height: 0.98;
+    letter-spacing: -0.03em; margin: 0; }
+  .display-title mark { background: var(--primary-container); color: var(--on-primary-container);
+    padding-inline: var(--space-xs); }
+  .hero-lede { font-size: 1.05rem; color: var(--ink-var); max-width: 62ch; margin: 0; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-md); align-items: center; }
+  .hero-showcase { border: var(--border-thick); box-shadow: var(--shadow);
+    background: var(--card); padding: var(--space-lg);
+    display: flex; flex-direction: column; gap: var(--space-md); justify-content: space-between; }
+  .showcase-bar { height: 10px; background: var(--secondary); border: var(--border-medium); }
+  .hero-stats-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-sm); }
+  .stat-tile { border: var(--border-medium); background: var(--surface);
+    padding: var(--space-sm) var(--space-md); }
+  .stat-tile--highlight { background: var(--primary-container); }
+  .stat-label { font-family: var(--font-headline); font-size: 0.7rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-var); display: block; }
+  .stat-tile--highlight .stat-label { color: var(--on-primary-container); }
+  .stat-val { font-family: var(--font-headline); font-weight: 700; font-size: 1.35rem;
+    letter-spacing: -0.02em; font-variant-numeric: tabular-nums; display: block; margin-top: 2px; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-xs);
+    min-height: 44px; padding: var(--space-sm) var(--space-md);
+    font-family: var(--font-headline); font-size: 0.75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em; border: var(--border-thick);
+    box-shadow: var(--shadow-sm); cursor: pointer; text-decoration: none;
+    transition: transform var(--dur-micro), box-shadow var(--dur-micro),
+      background-color var(--dur-micro), color var(--dur-micro); }
+  .btn:hover:not(:disabled) { background: var(--primary); color: var(--on-primary);
+    transform: translate(-1px, -1px); }
+  .btn:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: none; }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; box-shadow: none; }
+  .btn-primary { background: var(--primary-container); color: var(--on-primary-container); }
+  .btn-secondary { background: var(--card); color: var(--ink); }
+  .btn-green { background: var(--primary); color: var(--on-primary); }
+  .btn-teal { background: var(--tertiary); color: var(--on-tertiary); }
+  .btn-sm { min-height: 38px; padding: var(--space-xs) var(--space-sm); font-size: 0.72rem; }
+
+  /* Section */
+  .section-block { margin-bottom: var(--space-2xl); padding-top: var(--space-lg);
+    border-top: var(--space-sm) solid var(--accent-color, var(--primary)); }
+  .section-block--blue { --accent-color: var(--tertiary); }
+  .section-block--red { --accent-color: var(--secondary); }
+  .section-block--yellow { --accent-color: var(--primary-container); }
+  .section-block--black { --accent-color: var(--primary); }
+  .section-header { display: flex; flex-wrap: wrap; align-items: flex-end;
+    justify-content: space-between; gap: var(--space-md); margin-bottom: var(--space-lg); }
+  .section-title { font-family: var(--font-headline); font-weight: 700;
+    font-size: clamp(1.375rem, 1.15rem + 0.9vw, 1.875rem); letter-spacing: -0.02em;
+    line-height: 1.08; margin: var(--space-sm) 0 var(--space-xs); }
+  .section-sub { color: var(--ink-var); max-width: 65ch; margin: 0; }
+
+  /* Filter */
+  .filter-row { display: flex; flex-wrap: wrap; gap: var(--space-sm);
+    margin-bottom: var(--space-lg); align-items: center; }
+  .filter-chip { min-height: 44px; padding: var(--space-xs) var(--space-md);
+    font-family: var(--font-headline); font-size: 0.75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em; background: var(--card); color: var(--ink);
+    border: var(--border-medium); cursor: pointer;
+    transition: background-color var(--dur-micro), transform var(--dur-micro); }
+  .filter-chip:hover { background: var(--surface-high); transform: translate(-1px, -1px); }
+  .filter-chip.is-active { background: var(--primary-container); color: var(--on-primary-container);
+    border: var(--border-thick); box-shadow: var(--shadow-sm); }
+
+  /* Catalog */
+  .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(285px, 100%), 1fr));
+    gap: var(--space-lg); }
+  .product-card { border: var(--border-thick); box-shadow: var(--shadow);
+    background: var(--surface-low); display: flex; flex-direction: column;
+    justify-content: space-between; overflow: hidden;
+    transition: transform var(--dur-short), box-shadow var(--dur-short); }
+  .product-card:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--outline); }
+  .product-visual { background: var(--card); border-bottom: var(--border-thick);
+    padding: var(--space-md); display: flex; align-items: center; justify-content: center;
+    min-height: 185px; position: relative; }
+  .product-cat-tag { position: absolute; top: var(--space-sm); left: var(--space-sm);
+    font-family: var(--font-headline); font-size: 0.68rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em; padding: 2px 6px;
+    border: var(--border-medium); background: var(--tertiary); color: var(--on-tertiary); }
+  .product-cat-tag--gold { background: var(--gold); color: var(--ink); }
+  .product-cat-tag--coral { background: var(--secondary); color: #fff; }
+  .product-cat-tag--green { background: var(--primary); color: var(--on-primary); }
+  .product-body { padding: var(--space-md); display: flex; flex-direction: column;
+    gap: var(--space-sm); flex: 1; }
+  .product-title { font-family: var(--font-headline); font-weight: 700; font-size: 1.125rem;
+    line-height: 1.2; margin: 0; }
+  .product-specs { display: grid; gap: 4px; font-size: 0.84rem; color: var(--ink-var);
+    border-top: var(--border-light); padding-top: var(--space-xs); }
+  .product-spec-row { display: flex; justify-content: space-between; gap: var(--space-sm); }
+  .product-spec-row span { flex-shrink: 0; }
+  .product-spec-row strong { color: var(--ink); font-weight: 600; text-align: right; }
+  .product-footer { padding: var(--space-md); padding-top: 0; display: flex;
+    align-items: center; justify-content: space-between; gap: var(--space-sm); flex-wrap: wrap; }
+  .product-price { font-family: var(--font-headline); font-weight: 700; font-size: 1.375rem;
+    font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+
+  /* Simulator */
+  .studio-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.35fr);
+    gap: var(--space-lg); align-items: start; }
+  .panel-box { border: var(--border-thick); box-shadow: var(--shadow);
+    background: var(--surface-low); padding: var(--space-lg); }
+  .panel-box--white { background: var(--card); }
+  .panel-heading { font-family: var(--font-headline); font-weight: 700;
+    font-size: 1.25rem; margin: 0 0 var(--space-md); padding-bottom: var(--space-xs);
+    border-bottom: var(--border-thick); display: flex; align-items: center;
+    justify-content: space-between; gap: var(--space-sm); }
+  .control-group { margin-bottom: var(--space-md); }
+  .control-label { display: block; font-family: var(--font-headline); font-size: 0.75rem;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--ink); margin-bottom: var(--space-xs); }
+  .input-bauhaus, .select-bauhaus, .textarea-bauhaus { width: 100%; min-height: 44px;
+    padding: var(--space-sm); font-size: 0.95rem; color: var(--ink);
+    background: var(--card); border: var(--border-medium); }
+  .input-bauhaus:focus, .select-bauhaus:focus, .textarea-bauhaus:focus {
+    border-color: var(--tertiary); outline: 3px solid var(--focus); outline-offset: 1px; }
+  .preset-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-xs); }
+  .preset-btn { min-height: 44px; padding: var(--space-xs) var(--space-sm);
+    background: var(--card); border: var(--border-medium);
+    font-family: var(--font-headline); font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink);
+    cursor: pointer; text-align: center;
+    transition: background-color var(--dur-micro); }
+  .preset-btn:hover { background: var(--surface-high); }
+  .preset-btn.is-active { background: var(--primary-container); border: var(--border-thick);
+    box-shadow: var(--shadow-sm); }
+  .segmented-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-xs); }
+  .segmented-row--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .seg-btn { min-height: 44px; padding: var(--space-xs) var(--space-sm);
+    border: var(--border-medium); background: var(--card); color: var(--ink);
+    font-family: var(--font-headline); font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em; cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    line-height: 1.2; text-align: center; }
+  .seg-btn small { font-weight: 500; text-transform: none; letter-spacing: 0;
+    color: var(--ink-var); margin-top: 2px; font-size: 0.68rem; }
+  .seg-btn.is-active { background: var(--primary-container); border: var(--border-thick);
+    box-shadow: var(--shadow-sm); }
+  .seg-btn.is-active small { color: var(--on-primary-container); }
+  .canvas-stage { border: var(--border-thick); background: var(--card);
+    padding: var(--space-md); display: flex; flex-direction: column;
+    align-items: center; gap: var(--space-sm); overflow: auto; }
+  #bead-canvas { border: var(--border-medium); background: var(--card);
+    cursor: crosshair; max-width: 100%; height: auto; touch-action: manipulation; }
+  .canvas-caption { font-size: 0.82rem; color: var(--ink-var);
+    text-align: center; margin: 0; }
+  .sim-readout-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: var(--space-sm); margin-top: var(--space-md); }
+  .bead-breakdown-table-wrap { max-height: 240px; overflow-y: auto;
+    border: var(--border-medium); background: var(--card); margin-top: var(--space-md); }
+  table.data-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+  table.data-table thead th { position: sticky; top: 0; background: var(--surface-high);
+    border-bottom: var(--border-thick); font-family: var(--font-headline);
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; text-align: left; padding: var(--space-sm); z-index: 1; }
+  table.data-table tbody td { padding: var(--space-xs) var(--space-sm);
+    border-bottom: var(--border-light); vertical-align: middle; }
+  table.data-table tbody tr:hover { background: var(--surface); }
+  .num-cell { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+  /* Color dialog */
+  .color-dialog { width: min(1100px, 96vw); max-height: 92vh; padding: var(--space-md);
+    border: var(--border-thick); background: var(--background); color: var(--ink);
+    box-shadow: var(--shadow); }
+  .color-dialog::backdrop { background: rgba(26, 36, 22, 0.6); }
+  .color-dialog-bar { display: flex; justify-content: flex-end; margin-bottom: var(--space-sm); }
+  .color-ref-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+    gap: var(--space-md); }
+  .color-ref-card { border: var(--border-thick); background: var(--card);
+    box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
+  .color-ref-swatch { height: 54px; border-bottom: var(--border-thick);
+    display: flex; align-items: flex-start; justify-content: flex-end; padding: var(--space-xs); }
+  .essential-badge { font-family: var(--font-headline); font-size: 0.65rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em; background: var(--primary-container);
+    color: var(--on-primary-container); border: var(--border-medium); padding: 2px 6px; }
+  .color-ref-info { padding: var(--space-sm) var(--space-md); }
+  .color-ref-code { font-family: var(--font-headline); font-weight: 700; font-size: 1.05rem; }
+  .color-ref-sku { font-family: var(--font-headline); font-size: 0.72rem; color: var(--ink-var); }
+
+  /* Guide cards */
+  .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr));
+    gap: var(--space-lg); }
+  .guide-card { border: var(--border-thick); background: var(--surface-low);
+    box-shadow: var(--shadow); padding: var(--space-lg); }
+  .guide-card--accent { background: var(--tertiary); color: var(--on-tertiary); }
+  .guide-card--accent p, .guide-card--accent li { color: var(--on-tertiary); }
+  .guide-card--warn { background: #fff7d6; border-color: var(--warning); }
+  .guide-card h3 { font-family: var(--font-headline); margin-top: 0; }
+  .guide-card ul { margin: 0; padding-left: 1.2rem; font-size: 0.9rem; }
+  .guide-card li { margin-bottom: 4px; }
+  .guide-card p { margin: 0 0 var(--space-sm); font-size: 0.9rem; }
+
+  /* Steps + FAQ */
+  .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md); margin-bottom: var(--space-xl); }
+  .step-card { border: var(--border-thick); background: var(--card);
+    box-shadow: var(--shadow-sm); padding: var(--space-md); }
+  .step-num { display: inline-grid; place-items: center; width: 40px; height: 40px;
+    background: var(--primary-container); border: var(--border-medium);
+    font-family: var(--font-headline); font-weight: 700; margin-bottom: var(--space-sm); }
+  .step-card h3 { font-family: var(--font-headline); margin: 0 0 var(--space-xs); font-size: 1.05rem; }
+  .step-card p { margin: 0; font-size: 0.9rem; color: var(--ink-var); }
+  .faq-list { display: flex; flex-direction: column; gap: var(--space-sm); }
+  .faq-item { border: var(--border-medium); background: var(--card); }
+  .faq-item summary { cursor: pointer; padding: var(--space-md); min-height: 44px;
+    font-family: var(--font-headline); font-weight: 700; list-style: none;
+    display: flex; justify-content: space-between; gap: var(--space-md); }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 1.25rem; line-height: 1; }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item[open] summary { background: var(--primary-container); border-bottom: var(--border-medium); }
+  .faq-item p { margin: 0; padding: var(--space-md); color: var(--ink-var); font-size: 0.9rem; }
+
+  /* Footer */
+  .site-footer { border-top: var(--rule-heavy); padding: var(--space-xl) 0 var(--space-lg);
+    margin-top: var(--space-2xl); display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--space-lg); }
+  .footer-col { font-size: 0.85rem; color: var(--ink-var); }
+  .footer-col strong { font-family: var(--font-headline); text-transform: uppercase;
+    color: var(--ink); display: block; margin-bottom: var(--space-sm); }
+  .footer-col a { color: var(--ink); font-weight: 700; text-decoration: underline;
+    overflow-wrap: anywhere; }
+  .footer-col ul { margin: 0; padding-left: 1.1rem; }
+  .footer-col li { margin-bottom: 3px; }
+  .footer-bottom { grid-column: 1 / -1; border-top: var(--border-light);
+    padding-top: var(--space-md); margin-top: var(--space-md); font-size: 0.78rem; }
+
+  /* Cart drawer */
+  .cart-backdrop { position: fixed; inset: 0; background: rgba(26, 36, 22, 0.55);
+    z-index: 90; display: none; }
+  .cart-backdrop.is-open { display: block; }
+  .cart-drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(520px, 100vw);
+    background: var(--background); border-left: var(--rule-heavy); z-index: 100;
+    display: flex; flex-direction: column; transform: translateX(100%);
+    transition: transform var(--dur-short) var(--ease-out); }
+  .cart-drawer.is-open { transform: translateX(0); }
+  .cart-drawer-header { padding: var(--space-md) var(--space-lg);
+    background: var(--primary-container); border-bottom: var(--border-thick);
+    display: flex; align-items: center; justify-content: space-between; gap: var(--space-sm); }
+  .cart-drawer-title { font-family: var(--font-headline); font-weight: 700;
+    font-size: 1.25rem; margin: 0; text-transform: uppercase; }
+  .cart-drawer-body { flex: 1; overflow-y: auto; padding: var(--space-md) var(--space-lg);
+    display: flex; flex-direction: column; gap: var(--space-md); }
+  .cart-item-card { border: var(--border-thick); background: var(--card);
+    box-shadow: var(--shadow-sm); padding: var(--space-md);
+    display: flex; flex-direction: column; gap: var(--space-xs); }
+  .cart-item-top { display: flex; justify-content: space-between;
+    align-items: flex-start; gap: var(--space-sm); }
+  .cart-item-meta { font-size: 0.8rem; color: var(--ink-var); }
+  .cart-item-bottom { display: flex; justify-content: space-between; align-items: center;
+    gap: var(--space-sm); margin-top: var(--space-xs); padding-top: var(--space-xs);
+    border-top: var(--border-light); }
+  .qty-controls { display: inline-flex; align-items: center;
+    border: var(--border-medium); background: var(--surface); }
+  .qty-btn { width: 36px; height: 36px; border: none; background: transparent;
+    font-weight: 700; font-size: 1rem; cursor: pointer; color: var(--ink); }
+  .qty-btn:hover { background: var(--primary-container); }
+  .qty-val { min-width: 28px; text-align: center; font-family: var(--font-headline);
+    font-weight: 700; font-variant-numeric: tabular-nums; }
+  .cart-drawer-footer { padding: var(--space-md) var(--space-lg);
+    border-top: var(--border-thick); background: var(--surface-low);
+    display: flex; flex-direction: column; gap: var(--space-sm); }
+  .cart-line { display: flex; justify-content: space-between; font-size: 0.9rem; }
+  .cart-line--total { font-family: var(--font-headline); font-size: 1.15rem; font-weight: 700;
+    border-top: var(--border-medium); padding-top: var(--space-xs); margin-top: var(--space-xs); }
+  .whatsapp-output-box { border: var(--border-thick); background: var(--card);
+    padding: var(--space-sm); font-size: 0.8rem; white-space: pre-wrap;
+    max-height: 170px; overflow-y: auto; }
+  .shipping-box { border: var(--border-medium); background: var(--card);
+    padding: var(--space-md); }
+  .shipping-input-row { display: flex; gap: var(--space-sm); margin-bottom: var(--space-sm); }
+  .shipping-input-row input { flex: 1; min-width: 100px; }
+  .shipping-info { font-size: 0.82rem; color: var(--ink-var); margin-bottom: var(--space-xs); }
+  .shipping-options { display: flex; flex-direction: column; gap: var(--space-xs); }
+  .shipping-opt { display: flex; align-items: center; gap: var(--space-sm);
+    border: var(--border-medium); background: var(--surface-low);
+    padding: var(--space-sm); cursor: pointer; }
+  .shipping-opt input[type="radio"] { width: 18px; height: 18px; accent-color: var(--primary); }
+  .shipping-opt-body { flex: 1; }
+  .shipping-opt-body small { display: block; font-size: 0.72rem; color: var(--ink-var); }
+  .shipping-opt-valor { font-family: var(--font-headline); font-weight: 700;
+    font-variant-numeric: tabular-nums; }
+  .shipping-deadline { font-size: 0.78rem; color: var(--ink-var);
+    border-top: var(--border-light); padding-top: var(--space-xs);
+    margin-top: var(--space-xs); }
+
+  /* Toast */
+  .inline-toast { position: fixed; bottom: var(--space-lg); left: var(--space-lg);
+    z-index: 120; border: var(--border-thick); box-shadow: var(--shadow);
+    background: var(--primary); color: var(--on-primary);
+    padding: var(--space-sm) var(--space-md); font-family: var(--font-headline);
+    font-weight: 700; font-size: 0.82rem; text-transform: uppercase;
+    letter-spacing: 0.06em; display: none; align-items: center;
+    gap: var(--space-sm); max-width: min(420px, calc(100vw - 2rem)); }
+  .inline-toast.is-visible { display: inline-flex; }
+
+  [hidden] { display: none !important; }
+
+  @media (max-width: 960px) {
+    .hero-grid, .studio-layout, .site-footer { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .app-shell { padding: var(--space-sm) var(--space-sm) var(--space-2xl); }
+    .site-header { padding: var(--space-sm); }
+    .mobile-menu-btn { display: inline-flex; }
+    .main-nav { display: none; width: 100%; flex-direction: column;
+      align-items: stretch; padding-top: var(--space-sm); border-top: var(--border-medium); }
+    .main-nav.is-open { display: flex; }
+    .hero-main { padding: var(--space-lg); }
+    .preset-grid, .segmented-row { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#topo" class="brand-link" aria-label="Cannu Fuse Beads — início">
+      <div class="brand-mark" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="2" height="2" fill="#1a2416"/>
+          <rect x="3" y="1" width="2" height="2" fill="#b8e986"/>
+          <rect x="5" y="1" width="2" height="2" fill="#1a2416"/>
+          <rect x="1" y="3" width="2" height="2" fill="#225c36"/>
+          <rect x="3" y="3" width="2" height="2" fill="#fafcf7"/>
+          <rect x="5" y="3" width="2" height="2" fill="#225c36"/>
+          <rect x="1" y="5" width="2" height="2" fill="#1a2416"/>
+          <rect x="3" y="5" width="2" height="2" fill="#b8e986"/>
+          <rect x="5" y="5" width="2" height="2" fill="#1a2416"/>
+        </svg>
+      </div>
+      <div>
+        <span class="brand-name">Cannu Fuse Beads</span>
+        <span class="brand-sub">Estúdio · Contas Termofusíveis Mini 2,6 mm</span>
+      </div>
+    </a>
+
+    <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Abrir menu" aria-expanded="false">
+      <i data-lucide="menu"></i>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+      <a href="#catalogo" class="nav-link" onclick="closeMobileMenu()">Catálogo</a>
+      <a href="#simulador" class="nav-link" onclick="closeMobileMenu()">Simulador</a>
+      <a href="#como-funciona" class="nav-link" onclick="closeMobileMenu()">Como Funciona</a>
+      <a href="#sobre" class="nav-link" onclick="closeMobileMenu()">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="cart-trigger" onclick="openCartDrawer()" aria-label="Abrir carrinho">
+        <i data-lucide="shopping-cart"></i>
+        <span>Carrinho</span>
+        <span class="cart-badge-count" id="header-cart-count">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="app-shell" id="topo">
+
+  <section class="hero-grid" aria-label="Apresentação">
+    <div class="hero-main">
+      <div>
+        <span class="kicker">Contas termofusíveis · Mini 2,6 mm</span>
+        <h1 class="display-title" style="margin-top: var(--space-sm);">
+          Arte em <mark>pixel bead</mark> feita à mão.
+        </h1>
+      </div>
+      <p class="hero-lede">
+        Brincos, chaveiros, ímãs e marcadores feitos sob encomenda em contas termofusíveis
+        Mini 2,6 mm. Designs autorais, fusão dupla, anzol de aço cirúrgico nos brincos e
+        ferragens reforçadas em todas as peças.
+      </p>
+      <div class="hero-actions">
+        <a href="#simulador" class="btn btn-primary">
+          <i data-lucide="sparkles"></i> Abrir Simulador
+        </a>
+        <a href="#catalogo" class="btn btn-secondary">
+          <i data-lucide="grid"></i> Ver Catálogo
+        </a>
+      </div>
+    </div>
+
+    <aside class="hero-showcase">
+      <div class="showcase-bar" aria-hidden="true"></div>
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:var(--space-sm);">
+        <span class="kicker kicker--blue">Resumo do estúdio</span>
+      </div>
+      <div class="hero-stats-grid">
+        <div class="stat-tile stat-tile--highlight">
+          <span class="stat-label">Contas</span>
+          <span class="stat-val">Mini 2,6 mm</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">Placas</span>
+          <span class="stat-val">52 · 76</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">Fusão</span>
+          <span class="stat-val">Dupla</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-label">Brinco</span>
+          <span class="stat-val">Hipoalergênico</span>
+        </div>
+      </div>
+      <p style="margin:0; font-size:0.85rem; color:var(--ink-var);">
+        Peças decorativas e utilitárias com partes pequenas.
+        <strong>Não recomendado para menores de 3 anos.</strong>
+        Não são brinquedos.
+      </p>
+    </aside>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo" class="section-block section-block--blue">
+    <div class="section-header">
+      <div>
+        <span class="kicker kicker--blue">Vitrine</span>
+        <h2 class="section-title">Catálogo</h2>
+        <p class="section-sub">
+          Designs autorais em contas termofusíveis Mini 2,6 mm. Cada peça é feita sob encomenda,
+          com fusão dupla e ferragens reforçadas. Pequenas variações de tom e formato fazem
+          parte do artesanato.
+        </p>
+      </div>
+      <div style="font-family:var(--font-headline); font-weight:700; font-size:0.8rem;">
+        EXIBINDO <span id="catalog-count-label">14</span> PEÇAS
+      </div>
+    </div>
+
+    <div class="filter-row" role="group" aria-label="Filtrar por categoria">
+      <button type="button" class="filter-chip is-active" data-cat="todos" onclick="setCatalogFilter('todos', this)">Todos (14)</button>
+      <button type="button" class="filter-chip" data-cat="Acessórios" onclick="setCatalogFilter('Acessórios', this)">Acessórios</button>
+      <button type="button" class="filter-chip" data-cat="Utilidades" onclick="setCatalogFilter('Utilidades', this)">Utilidades</button>
+      <button type="button" class="filter-chip" data-cat="Quadros" onclick="setCatalogFilter('Quadros', this)">Quadros</button>
+    </div>
+
+    <div class="catalog-grid" id="catalog-grid"></div>
+
+    <div style="margin-top:var(--space-md); border:var(--border-medium); background:var(--card); padding:var(--space-md); font-size:0.85rem; line-height:1.5;">
+      <strong>Como funciona:</strong> todas as peças são feitas sob encomenda. O prazo de produção é de até <strong>5 dias úteis</strong> e o frete é calculado pelo seu CEP no carrinho. O pagamento é combinado pelo WhatsApp.
+      <br><strong>Segurança:</strong> peças decorativas com partes pequenas — <strong>não recomendado para menores de 3 anos</strong>. Brincos com anzol de aço cirúrgico hipoalergênico.
+    </div>
+  </section>
+
+  <!-- SIMULADOR -->
+  <section id="simulador" class="section-block section-block--yellow">
+    <div class="section-header">
+      <div>
+        <span class="kicker kicker--yellow">Estúdio</span>
+        <h2 class="section-title">Simulador de Molde</h2>
+        <p class="section-sub">
+          Escolha um modelo autoral, ajuste placa, fusão e finalidade. O preço é calculado
+          com base no tempo real de produção e nas cores do molde.
+        </p>
+      </div>
+    </div>
+
+    <div class="studio-layout">
+      <div style="display:flex; flex-direction:column; gap:var(--space-lg);">
+
+        <div class="panel-box">
+          <h3 class="panel-heading"><span>1. Modelo</span><i data-lucide="image"></i></h3>
+          <div class="control-group">
+            <span class="control-label">Galeria de modelos autorais</span>
+            <div class="preset-grid" id="preset-grid">
+              <button type="button" class="preset-btn is-active" data-preset="heart" onclick="loadPreset('heart', this)">Coração</button>
+              <button type="button" class="preset-btn" data-preset="cat" onclick="loadPreset('cat', this)">Gatinho</button>
+              <button type="button" class="preset-btn" data-preset="cactus" onclick="loadPreset('cactus', this)">Cacto</button>
+              <button type="button" class="preset-btn" data-preset="daisy" onclick="loadPreset('daisy', this)">Margarida</button>
+              <button type="button" class="preset-btn" data-preset="watermelon" onclick="loadPreset('watermelon', this)">Melancia</button>
+              <button type="button" class="preset-btn" data-preset="cherry" onclick="loadPreset('cherry', this)">Cereja</button>
+              <button type="button" class="preset-btn" data-preset="mushroom" onclick="loadPreset('mushroom', this)">Cogumelo</button>
+              <button type="button" class="preset-btn" data-preset="star" onclick="loadPreset('star', this)">Estrela</button>
+              <button type="button" class="preset-btn" data-preset="bookmark" onclick="loadPreset('bookmark', this)">Marcador</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-box">
+          <h3 class="panel-heading"><span>2. Placa</span><i data-lucide="grid"></i></h3>
+          <div class="control-group" style="margin-bottom:0;">
+            <span class="control-label">Tamanho da grade</span>
+            <div class="segmented-row segmented-row--2">
+              <button type="button" class="seg-btn is-active" data-grid="52" onclick="setGridSize(52, this)">
+                <span>52×52</span><small>~13,5 cm</small>
+              </button>
+              <button type="button" class="seg-btn" data-grid="76" onclick="setGridSize(76, this)">
+                <span>76×76</span><small>~19,8 cm</small>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-box">
+          <h3 class="panel-heading"><span>3. Fusão</span><i data-lucide="flame"></i></h3>
+          <div class="control-group">
+            <span class="control-label">Nível</span>
+            <div class="segmented-row">
+              <button type="button" class="seg-btn" data-melt="leve" onclick="setMeltLevel('leve', this)">
+                <span>Leve</span><small>Quadro</small>
+              </button>
+              <button type="button" class="seg-btn is-active" data-melt="media" onclick="setMeltLevel('media', this)">
+                <span>Média</span><small>Chaveiro</small>
+              </button>
+              <button type="button" class="seg-btn" data-melt="completa" onclick="setMeltLevel('completa', this)">
+                <span>Flat</span><small>Porta-copo</small>
+              </button>
+            </div>
+          </div>
+          <div class="control-group" style="margin-bottom:0;">
+            <span class="control-label">Lados</span>
+            <div class="segmented-row segmented-row--2">
+              <button type="button" class="seg-btn" data-sides="1" onclick="setMeltSides(1, this)">
+                <span>1 lado</span><small>Textura 3D</small>
+              </button>
+              <button type="button" class="seg-btn is-active" data-sides="2" onclick="setMeltSides(2, this)">
+                <span>2 lados</span><small>Resistência</small>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-box panel-box--white">
+          <h3 class="panel-heading"><span>4. Finalizar</span><i data-lucide="shopping-bag"></i></h3>
+          <div class="control-group">
+            <label for="project-name-input" class="control-label">Nome do projeto</label>
+            <input type="text" id="project-name-input" class="input-bauhaus" value="Coração Pixel">
+          </div>
+          <div class="control-group">
+            <label for="project-purpose-select" class="control-label">Finalidade</label>
+            <select id="project-purpose-select" class="select-bauhaus">
+              <option value="chaveiro">Chaveiro · argola inox</option>
+              <option value="ima">Ímã · manta 1,5 mm</option>
+              <option value="brinco">Par de brincos · aço cirúrgico</option>
+              <option value="marcador">Marcador de página</option>
+              <option value="portacopo">Porta-copo · cortiça</option>
+              <option value="quadro">Quadro decorativo</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary" style="width:100%;" onclick="addSimProjectToCart()">
+            <i data-lucide="plus"></i> Adicionar ao carrinho
+          </button>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:var(--space-lg);">
+        <div class="panel-box panel-box--white">
+          <div class="canvas-stage">
+            <canvas id="bead-canvas" width="480" height="480"></canvas>
+            <p class="canvas-caption">Prévia do molde · fundo vazio · cores de referência</p>
+          </div>
+
+          <div style="margin-top:var(--space-md);">
+            <button type="button" class="btn btn-sm btn-secondary" style="width:100%;" onclick="openColorDialog()">
+              <i data-lucide="palette"></i> Ver cores de referência
+            </button>
+          </div>
+
+          <div class="sim-readout-grid">
+            <div class="stat-tile">
+              <span class="stat-label">Contas totais</span>
+              <span class="stat-val" id="sim-total-beads">0</span>
+            </div>
+            <div class="stat-tile">
+              <span class="stat-label">Dimensão</span>
+              <span class="stat-val" id="sim-dimensions">—</span>
+            </div>
+            <div class="stat-tile">
+              <span class="stat-label">Tempo</span>
+              <span class="stat-val" id="sim-time-est">—</span>
+            </div>
+            <div class="stat-tile stat-tile--highlight">
+              <span class="stat-label">Preço estimado</span>
+              <span class="stat-val" id="sim-suggested-price">R$ 0,00</span>
+            </div>
+          </div>
+
+          <div class="bead-breakdown-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Cor</th><th>Nome</th><th class="num-cell">Qtd</th></tr>
+              </thead>
+              <tbody id="sim-color-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="section-block section-block--yellow">
+    <div class="section-header">
+      <div>
+        <span class="kicker kicker--yellow">Passo a passo</span>
+        <h2 class="section-title">Como Funciona</h2>
+        <p class="section-sub">Do molde ao pedido pronto.</p>
+      </div>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card"><span class="step-num">1</span><h3>Escolha</h3><p>Selecione uma peça do catálogo ou um modelo no simulador.</p></div>
+      <div class="step-card"><span class="step-num">2</span><h3>Ajuste</h3><p>Defina placa, nível de fusão e finalidade conforme o uso.</p></div>
+      <div class="step-card"><span class="step-num">3</span><h3>Monte</h3><p>Adicione ao carrinho, calcule o frete e confirme os dados.</p></div>
+      <div class="step-card"><span class="step-num">4</span><h3>Confirme</h3><p>Enviamos o resumo pelo WhatsApp. Combinamos pagamento e envio.</p></div>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item"><summary>Posso encomendar um design personalizado?</summary><p>Sim. Personalização com nome, inicial, pet ou tema sob consulta. Fale pelo WhatsApp antes de comprar. Peças personalizadas têm prazo maior e regra de devolução específica (explicada antes da compra).</p></details>
+      <details class="faq-item"><summary>Qual a diferença entre Mini 2,6 mm e Midi 5 mm?</summary><p>Trabalhamos com <strong>Mini 2,6 mm</strong>. A Midi 5 mm fica disponível sob consulta (prazo maior). Mini rende mais detalhe e é ideal para brincos leves, chaveiros, ímãs e retratos.</p></details>
+      <details class="faq-item"><summary>Qual fusão devo escolher?</summary><p>Leve mantém os furos abertos (quadros). Média dá resistência (chaveiros, brincos). Flat melt veda a superfície (porta-copos).</p></details>
+      <details class="faq-item"><summary>As cores são exatamente iguais às da foto?</summary><p>Pequenas variações podem ocorrer entre marcas e lotes. A paleta de referência orienta o tom, mas não é garantia de igualdade absoluta.</p></details>
+      <details class="faq-item"><summary>Qual o prazo de produção?</summary><p>Até <strong>5 dias úteis</strong> para peças do catálogo. Peças personalizadas ou grandes (quadros) podem levar mais; o prazo real é confirmado no WhatsApp antes do pagamento.</p></details>
+      <details class="faq-item"><summary>Como funciona o frete?</summary><p>Você calcula no carrinho, digitando seu CEP. Usamos Correios (PAC ou SEDEX) ou entrega local combinada. O valor e o prazo aparecem antes de finalizar.</p></details>
+      <details class="faq-item"><summary>As peças são seguras para crianças?</summary><p>Não. São itens decorativos e utilitários com partes pequenas. <strong>Não recomendado para menores de 3 anos.</strong> Não são brinquedos.</p></details>
+      <details class="faq-item"><summary>Posso trocar ou devolver?</summary><p>Sim. Você tem <strong>7 dias corridos após o recebimento</strong> para desistir (CDC, Art. 49). O frete de retorno em desistência ou defeito é por nossa conta. Peça personalizada tem regra explicada antes da compra.</p></details>
+      <details class="faq-item"><summary>Quais formas de pagamento e horário?</summary><p>Pix (5% OFF), cartão (até 3x sem juros) e dinheiro em retirada local. Atendimento de segunda a sábado, 9h às 18h; fora do horário, resposta no próximo dia útil.</p></details>
+      <details class="faq-item"><summary>Como cuidar da peça?</summary><p>Limpar com pano úmido (não lavar na máquina). Evitar sol quente e quedas em superfície dura. Brinco: retirar antes de dormir e de entrar no banho.</p></details>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section-block section-block--blue">
+    <div class="section-header">
+      <div>
+        <span class="kicker kicker--blue">Oficina &amp; qualidade</span>
+        <h2 class="section-title">Sobre a Cannu Fuse Beads</h2>
+        <p class="section-sub">
+          Peças feitas à mão em contas termofusíveis, com teste de fusão, durabilidade e acabamento adaptado ao uso.
+        </p>
+      </div>
+    </div>
+    <div class="guide-grid">
+      <article class="guide-card">
+        <h3>Tamanho</h3>
+        <p>Trabalhamos com contas <strong>Mini 2,6 mm</strong> (placas 52×52 de ~13,5 cm e 76×76 de ~19,8 cm). Midi 5 mm sob consulta para peças específicas.</p>
+      </article>
+      <article class="guide-card">
+        <h3>Fusão</h3>
+        <p><strong>Leve</strong> preserva os furos (quadros). <strong>Média</strong> fecha metade do furo (chaveiros, brincos). <strong>Flat melt</strong> veda a superfície (porta-copos).</p>
+      </article>
+      <article class="guide-card guide-card--accent">
+        <h3>Ferragens</h3>
+        <p>Brinco: anzol de aço cirúrgico hipoalergênico. Chaveiro: argola inox 20/25 mm. Ímã: manta 1,5 mm. Porta-copo: base de cortiça 2 mm.</p>
+      </article>
+      <article class="guide-card guide-card--warn">
+        <h3>Segurança</h3>
+        <ul>
+          <li><strong>Não recomendado para menores de 3 anos</strong> (partes pequenas).</li>
+          <li>Uso como acessório ou decoração. Não é brinquedo.</li>
+          <li>Em caso de quebra, descarte a peça.</li>
+        </ul>
+      </article>
+      <article class="guide-card">
+        <h3>Como cuidar</h3>
+        <ul>
+          <li>Não lavar na máquina — pano úmido apenas.</li>
+          <li>Não expor ao sol quente (plástico amolece).</li>
+          <li>Evitar quedas em superfície dura.</li>
+          <li>Brinco: retirar antes de dormir e do banho.</li>
+        </ul>
+      </article>
+      <article class="guide-card">
+        <h3>Troca e devolução</h3>
+        <ul>
+          <li>7 dias para desistir após o recebimento (CDC, Art. 49).</li>
+          <li>Frete de retorno por nossa conta em desistência ou defeito.</li>
+          <li>Solicitação por WhatsApp com foto do problema.</li>
+          <li>Peça personalizada: regra explicada antes da compra.</li>
+        </ul>
+      </article>
+      <article class="guide-card">
+        <h3>Pagamento e horário</h3>
+        <ul>
+          <li>Pix (5% OFF), cartão (até 3x sem juros) e dinheiro em retirada local.</li>
+          <li>Segunda a sábado, 9h às 18h.</li>
+          <li>Fora do horário, resposta no próximo dia útil.</li>
+          <li>Prazo de produção e frete informados antes da confirmação.</li>
+        </ul>
+      </article>
+      <article class="guide-card">
+        <h3>Privacidade (LGPD)</h3>
+        <p>Coletamos apenas nome, endereço e telefone para enviar o pedido e manter contato. Não compartilhamos dados com terceiros fora do necessário para a entrega.</p>
+        <p>Para excluir seus dados, envie mensagem pelo WhatsApp ou e-mail.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-col">
+      <strong>Cannu Fuse Beads</strong>
+      Peças artesanais em contas termofusíveis, feitas sob encomenda, com designs autorais. Itens decorativos com partes pequenas: <strong>não recomendado para menores de 3 anos</strong>.
+    </div>
+    <div class="footer-col">
+      <strong>Contato</strong>
+      WhatsApp: <a href="https://wa.me/5511982077816" target="_blank" rel="noopener">(11) 98207-7816</a><br>
+      E-mail: <a href="mailto:canudinholiterario@gmail.com">canudinholiterario@gmail.com</a><br>
+      Seg a sáb, 9h às 18h
+    </div>
+    <div class="footer-col">
+      <strong>Política rápida</strong>
+      <ul>
+        <li>7 dias para desistir (CDC, Art. 49).</li>
+        <li>Frete de retorno por nossa conta em defeito.</li>
+        <li>Personalizados: regra informada antes da compra.</li>
+        <li>Dados: apenas para envio e contato (LGPD).</li>
+      </ul>
+    </div>
+    <div class="footer-bottom" style="font-size:0.78rem; color:var(--ink-var);">
+      <strong>Nota técnica:</strong> contas termofusíveis (não necessariamente Perler ou Hama). Cores de referência baseadas na carta Perler 2026, usadas apenas como equivalência cromática. Perler e Hama são marcas de seus respectivos titulares; a Cannu Fuse Beads não é afiliada a elas.
+    </div>
+  </footer>
+</main>
+
+<!-- DIALOG -->
+<dialog id="color-dialog" class="color-dialog" aria-label="Cores de referência">
+  <div class="color-dialog-bar">
+    <button type="button" class="btn btn-sm btn-secondary" onclick="closeColorDialog()" aria-label="Fechar">
+      <i data-lucide="x"></i> Fechar
+    </button>
+  </div>
+  <h2 style="font-family:var(--font-headline); margin:0 0 var(--space-xs);">Cores de referência</h2>
+  <p style="font-size:0.85rem; color:var(--ink-var); margin:0 0 var(--space-md);">
+    Paleta usada como referência cromática. Nem todas as cores estão em estoque — o simulador aproxima tons dentro das cores marcadas como disponíveis.
+  </p>
+  <div class="color-ref-grid" id="color-ref-grid"></div>
+</dialog>
+
+<!-- CART -->
+<div class="cart-backdrop" id="cart-backdrop" onclick="closeCartDrawer()"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho" aria-hidden="true">
+  <div class="cart-drawer-header">
+    <h2 class="cart-drawer-title">Carrinho (<span id="drawer-cart-count">0</span>)</h2>
+    <button type="button" class="btn btn-sm btn-secondary" onclick="closeCartDrawer()" aria-label="Fechar carrinho">
+      <i data-lucide="x"></i> Fechar
+    </button>
+  </div>
+
+  <div class="cart-drawer-body">
+    <div id="cart-empty-state" style="border:var(--border-thick); background:var(--card); padding:var(--space-lg); text-align:center;">
+      <p style="font-weight:700; margin-top:0;">Carrinho vazio.</p>
+      <p style="font-size:0.9rem; color:var(--ink-var);">
+        Adicione peças do catálogo ou monte um molde no simulador.
+      </p>
+      <button type="button" class="btn btn-primary" onclick="closeCartDrawer(); window.location.hash='#catalogo';">
+        Explorar catálogo
+      </button>
+    </div>
+
+    <div id="cart-items-list" style="display:flex; flex-direction:column; gap:var(--space-md);"></div>
+
+    <div id="cart-options-block" style="display:none; flex-direction:column; gap:var(--space-md);">
+      <div class="shipping-box">
+        <span class="control-label" style="margin-bottom:var(--space-sm); display:block;">Calcular frete</span>
+        <div class="shipping-input-row">
+          <input type="text" id="cep-input" class="input-bauhaus" placeholder="CEP (8 números)" maxlength="9" oninput="mascaraCEP(this)" aria-label="CEP para cálculo de frete">
+          <button type="button" class="btn btn-sm btn-primary" onclick="simularFrete()" aria-label="Calcular frete">
+            <i data-lucide="search"></i> Calcular
+          </button>
+        </div>
+        <div id="cep-info" class="shipping-info"></div>
+        <div id="frete-resultado" class="shipping-options"></div>
+      </div>
+
+      <div>
+        <label for="order-notes" class="control-label">Observações do pedido</label>
+        <textarea id="order-notes" class="textarea-bauhaus" placeholder="Ex.: nome na plaquinha, embalagem de presente, cor preferida..." oninput="renderCart();"></textarea>
+      </div>
+
+      <div>
+        <span class="control-label">Pagamento</span>
+        <div class="segmented-row segmented-row--2">
+          <button type="button" class="seg-btn is-active" id="pay-pix-btn" onclick="setPaymentMethod('pix')">
+            <span>Pix (5% OFF)</span><small>Imediato</small>
+          </button>
+          <button type="button" class="seg-btn" id="pay-card-btn" onclick="setPaymentMethod('card')">
+            <span>Cartão</span><small>Até 3x</small>
+          </button>
+        </div>
+      </div>
+
+      <div id="whatsapp-checkout-panel" style="border:var(--border-thick); background:var(--primary-container); padding:var(--space-md);">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:var(--space-sm); margin-bottom:var(--space-xs);">
+          <strong style="font-family:var(--font-headline); text-transform:uppercase; font-size:0.78rem;">Pedido para WhatsApp</strong>
+          <button type="button" class="btn btn-sm btn-secondary" onclick="copyWhatsAppMessage()" aria-label="Copiar mensagem">
+            <i data-lucide="copy"></i> Copiar
+          </button>
+        </div>
+        <div class="whatsapp-output-box" id="whatsapp-message-preview"></div>
+        <a id="whatsapp-open-link" class="btn btn-primary" style="width:100%; margin-top:var(--space-sm);" href="#" target="_blank" rel="noopener">
+          <i data-lucide="send"></i> Abrir no WhatsApp
+        </a>
+      </div>
+
+      <div class="shipping-deadline">
+        <strong>Prazo de produção:</strong> até 5 dias úteis, confirmado no WhatsApp.
+        <strong>Prazo de envio:</strong> após a postagem, conforme transportadora.
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
+    <div class="cart-line"><span>Subtotal</span><strong id="cart-subtotal-val">R$ 0,00</strong></div>
+    <div class="cart-line" id="cart-discount-row" style="color:var(--positive); font-weight:600;">
+      <span>Desconto Pix (5%)</span><span id="cart-discount-val">- R$ 0,00</span>
+    </div>
+    <div class="cart-line" id="cart-shipping-row" style="display:none;">
+      <span>Frete</span><span id="cart-shipping-val">R$ 0,00</span>
+    </div>
+    <div class="cart-line cart-line--total"><span>Total</span><span id="cart-final-val">R$ 0,00</span></div>
+    <p style="font-size:0.75rem; color:var(--ink-var); margin:0;">
+      Pagamento combinado pelo WhatsApp. Frete calculado pelo CEP.
+    </p>
+  </div>
+</aside>
+
+<div class="inline-toast" id="inline-toast" role="status" aria-live="polite">
+  <i data-lucide="check-circle"></i>
+  <span id="inline-toast-text">Adicionado!</span>
+</div>
+
+<script>
+// ============================================================
+// 1. PALETA DE REFERÊNCIA (cores confirmadas, sem as duvidosas)
+// ============================================================
+const PALETTE = [
+  { code:'80-19018', name:'Preto', hex:'#1B1D21', essential:true },
+  { code:'80-19001', name:'Branco', hex:'#F7F7F5', essential:true },
+  { code:'80-19005', name:'Vermelho', hex:'#D92B2B', essential:true },
+  { code:'80-19004', name:'Laranja', hex:'#EB7B31', essential:true },
+  { code:'80-19003', name:'Amarelo', hex:'#E7CE3E', essential:true },
+  { code:'80-19080', name:'Verde claro', hex:'#4DAB64', essential:true },
+  { code:'80-15179', name:'Verde escuro', hex:'#305545', essential:true },
+  { code:'80-19009', name:'Azul claro', hex:'#278CC9', essential:true },
+  { code:'80-19008', name:'Azul escuro', hex:'#0E5092', essential:true },
+  { code:'80-19007', name:'Roxo', hex:'#684B86', essential:true },
+  { code:'80-19083', name:'Rosa', hex:'#D45496', essential:true },
+  { code:'80-19012', name:'Marrom', hex:'#674C44', essential:true },
+  { code:'80-19017', name:'Cinza', hex:'#909497', essential:true },
+  { code:'80-19035', name:'Bege', hex:'#C5AC90', essential:true },
+  { code:'80-19033', name:'Pêssego', hex:'#E9BFB9', essential:true },
+  { code:'80-19059', name:'Coral', hex:'#DD595B', essential:true },
+  { code:'80-19056', name:'Amarelo pastel', hex:'#E9E290', essential:true },
+  { code:'80-15216', name:'Céu', hex:'#4AC0D8', essential:true },
+  { code:'80-15241', name:'Maçã verde', hex:'#A3DE6F', essential:true },
+  { code:'80-19092', name:'Cinza escuro', hex:'#585C61', essential:false },
+  { code:'80-15244', name:'Rosa antigo', hex:'#D25D72', essential:false },
+  { code:'80-15245', name:'Íris', hex:'#4E56A3', essential:false },
+  { code:'80-15243', name:'Uva', hex:'#503B9C', essential:false },
+  { code:'80-15242', name:'Algodão doce', hex:'#F479B0', essential:false },
+  { code:'80-15272', name:'Coral claro', hex:'#FF9A8B', essential:false },
+  { code:'80-15203', name:'Flamingo', hex:'#F2AFB7', essential:false },
+  { code:'80-15204', name:'Salmão', hex:'#E1747A', essential:false },
+  { code:'80-15256', name:'Fruit punch', hex:'#CA3B65', essential:false },
+  { code:'80-15258', name:'Amora', hex:'#714875', essential:false },
+  { code:'80-19060', name:'Ameixa', hex:'#A75D9D', essential:false },
+  { code:'80-19062', name:'Turquesa', hex:'#0098C5', essential:false },
+  { code:'80-19011', name:'Verde água', hex:'#18C7B1', essential:false },
+  { code:'80-15247', name:'Floresta', hex:'#005D57', essential:false },
+  { code:'80-15218', name:'Teal', hex:'#047F8A', essential:false },
+  { code:'80-15254', name:'Sálvia', hex:'#BED4A6', essential:false },
+  { code:'80-15240', name:'Menta', hex:'#B3EED5', essential:false }
+];
+const PALETTE_MAP = {};
+PALETTE.forEach(c => PALETTE_MAP[c.code] = c);
+
+// ============================================================
+// 2. SPRITES AUTORAIS (somente peças genéricas)
+// ============================================================
+const CHAR_COLOR_MAP = {
+  '.':null,
+  'K':'80-19018','W':'80-19001','R':'80-19005',
+  'G':'80-19080','D':'80-15179','A':'80-19003',
+  'O':'80-19004','B':'80-19009','S':'80-15216',
+  'P':'80-19007','I':'80-19083','E':'80-19033',
+  'M':'80-19012','T':'80-19035','Z':'80-19017',
+  'N':'80-19092','L':'80-15241','Y':'80-19056',
+  'C':'80-19059'
+};
+
+const SPRITES = {
+  heart: [
+    '.KK...KK.',
+    'KRRK.KRRK',
+    'KRRRKRRRK',
+    'KRRRRRRRK',
+    'KRRRRRRRK',
+    '.KRRRRRK.',
+    '..KRRRK..',
+    '...KRK...',
+    '....K....'
+  ],
+  cat: [
+    '.K.K.....K.K.',
+    '.KWK.....KWK.',
+    '.KWWKKKKKWWK.',
+    '.KWWWWWWWWWK.',
+    'KWWKWWWWWKWWK',
+    'KWWKWWWWWKWWK',
+    'KWWWWWKKWWWWK',
+    'KWWWWWKKWWWWK',
+    '.KWWWWWWWWWK.',
+    '.KWWWWWWWWWK.',
+    '.KWWKKKKKWWK.',
+    '..K.K...K.K..'
+  ],
+  cactus: [
+    '....KKKKK....',
+    '...KGGGGGK...',
+    '..KGGGGGGGK..',
+    '..KGGGGGGGK..',
+    '..KGGGGGGGK..',
+    '..KGGGGGGGK..',
+    '...KGGGGGK...',
+    '...KKKKKKK...',
+    '....KMMMMK...',
+    '....KMMMMK...',
+    '....KMMMMK...',
+    '....KKKKKK...'
+  ],
+  daisy: [
+    '..K.K.K..',
+    '.KWKWKWK.',
+    '.KWWWWWK.',
+    'KKWWYWWKK',
+    'KWWWYWWWK',
+    'KKWWYWWKK',
+    '.KWWWWWK.',
+    '.KWKWKWK.',
+    '..K.K.K..'
+  ],
+  watermelon: [
+    '......K......',
+    '.....KRK.....',
+    '....KRRRK....',
+    '...KRRRRRK...',
+    '..KRRKRRRRK..',
+    '.KRRRRRRRRRK.',
+    'KRRRKRRKRRRRK',
+    'KGGGGGGGGGGGK',
+    '.KGGGGGGGGGK.',
+    '..KGGGGGGGK..',
+    '...KGGGGGK...',
+    '....KGGGK....',
+    '.....KKK.....'
+  ],
+  cherry: [
+    '.....KK.....',
+    '....KGGK....',
+    '...KG..GK...',
+    '..KG....GK..',
+    '.KRRK..KRRK.',
+    'KWRRRKKWRRRK',
+    'KRRRRKKRRRRK',
+    '.KKKK..KKKK.'
+  ],
+  mushroom: [
+    '....KKKKKK....',
+    '..KKRRRRRRKK..',
+    '.KRRWWRRWWRRK.',
+    'KRRWWWWRWWWWRK',
+    'KRRWWWWRWWWWRK',
+    'KRRRRRRRRRRRRK',
+    'KWWWRRRRRRWWWK',
+    'KWWKKKKKKKKWWK',
+    '.KKTTTTTTTTKK.',
+    '..KTKTTTTKTK..',
+    '..KTKTTTTKTK..',
+    '..KTTTTTTTTK..',
+    '...KKKKKKKK...'
+  ],
+  star: [
+    '.....K.....',
+    '....KAK....',
+    '...KAAAK...',
+    '...KAAAK...',
+    'KKKAAAAAKKK',
+    'KAAAAAAAAAK',
+    '.KAAAAAAAK.',
+    '..KAAAAAK..',
+    '..KAAAAAK..',
+    '..KAAKAAK..',
+    '..KKK.KKK..'
+  ],
+  bookmark: [
+    '.KKKK.',
+    'KRRRRK',
+    'KRWWRK',
+    'KRRRRK',
+    '.KGGK.',
+    '.KGGK.',
+    '.KAAK.',
+    '.KAAK.',
+    '.KGGK.',
+    '..KK..'
+  ]
+};
+
+// ============================================================
+// 3. CATÁLOGO (14 peças autorais)
+// ============================================================
+const CATALOG = [
+  { id:'p1',  name:'Chaveiro Coração 8-Bit',        cat:'Acessórios', price:28, size:'~3,5 × 3,5 cm',  finish:'Fusão dupla · argola inox 20mm', sprite:'heart',      accent:'coral' },
+  { id:'p2',  name:'Chaveiro Gatinho Kawaii',       cat:'Acessórios', price:30, size:'~4 × 4 cm',      finish:'Fusão dupla · argola inox 20mm', sprite:'cat',        accent:'gold' },
+  { id:'p3',  name:'Chaveiro Cacto Plantinha',      cat:'Acessórios', price:30, size:'~4 × 4,5 cm',    finish:'Fusão dupla · argola inox 20mm', sprite:'cactus',     accent:'green' },
+  { id:'p4',  name:'Chaveiro Melancia Verão',       cat:'Acessórios', price:28, size:'~4 × 4 cm',      finish:'Fusão dupla · argola inox 20mm', sprite:'watermelon', accent:'coral' },
+  { id:'p5',  name:'Chaveiro Cogumelo Kawaii',      cat:'Acessórios', price:28, size:'~3,5 × 4 cm',    finish:'Fusão dupla · argola inox 20mm', sprite:'mushroom',   accent:'coral' },
+  { id:'p6',  name:'Chaveiro Cereja 8-Bit',         cat:'Acessórios', price:28, size:'~3,5 × 3 cm',    finish:'Fusão dupla · argola inox 20mm', sprite:'cherry',     accent:'coral' },
+  { id:'p7',  name:'Ímã Margarida',                 cat:'Utilidades', price:22, size:'~3,5 × 3,5 cm',  finish:'Fusão dupla · manta 1,5mm',       sprite:'daisy',      accent:'gold' },
+  { id:'p8',  name:'Ímã Coração',                   cat:'Utilidades', price:20, size:'~3,5 × 3,5 cm',  finish:'Fusão dupla · manta 1,5mm',       sprite:'heart',      accent:'coral' },
+  { id:'p9',  name:'Ímã Estrela',                   cat:'Utilidades', price:20, size:'~4 × 4 cm',      finish:'Fusão dupla · manta 1,5mm',       sprite:'star',       accent:'gold' },
+  { id:'p10', name:'Par de Brincos Coração',        cat:'Acessórios', price:25, size:'~2,3 cm cada',   finish:'Anzol aço cirúrgico',              sprite:'heart',      accent:'coral' },
+  { id:'p11', name:'Par de Brincos Margarida',      cat:'Acessórios', price:25, size:'~2,3 cm cada',   finish:'Anzol aço cirúrgico',              sprite:'daisy',      accent:'gold' },
+  { id:'p12', name:'Par de Brincos Cereja',         cat:'Acessórios', price:25, size:'~2,3 cm cada',   finish:'Anzol aço cirúrgico',              sprite:'cherry',     accent:'coral' },
+  { id:'p13', name:'Marcador de Página Geométrico', cat:'Utilidades', price:22, size:'~15 × 3,5 cm',   finish:'Fusão completa fina',              sprite:'bookmark',   accent:'green' },
+  { id:'p14', name:'Quadro Pequeno Geométrico',     cat:'Quadros',    price:95, size:'~19,8 × 19,8 cm', finish:'Fusão leve + moldura MDF',         sprite:'star',       accent:'gold' }
+];
+
+// ============================================================
+// 4. ESTADO
+// ============================================================
+const WHATS = '5511982077816';
+const STORAGE_KEY = 'cannu-fuse-beads-cart-v1';
+const CEP_ORIGEM = '01001000'; // ajuste para o seu CEP
+
+let activeFilter = 'todos';
+let paymentMethod = 'pix';
+let cart = [];
+let freteSelecionado = null;
+
+let simState = {
+  preset: 'heart',
+  grid: 52,
+  bead: 2.6,
+  melt: 'media',
+  sides: 2
+};
+
+// ============================================================
+// 5. UTILITÁRIOS
+// ============================================================
+function brl(v) {
+  return Number(v || 0).toLocaleString('pt-BR', { style:'currency', currency:'BRL' });
+}
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function showToast(msg) {
+  const t = document.getElementById('inline-toast');
+  document.getElementById('inline-toast-text').textContent = msg;
+  t.classList.add('is-visible');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => t.classList.remove('is-visible'), 2800);
+}
+
+// ============================================================
+// 6. NAV
+// ============================================================
+function toggleMobileMenu() {
+  const nav = document.getElementById('main-nav');
+  const btn = document.getElementById('mobile-menu-btn');
+  const open = nav.classList.toggle('is-open');
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+function closeMobileMenu() {
+  document.getElementById('main-nav').classList.remove('is-open');
+  document.getElementById('mobile-menu-btn').setAttribute('aria-expanded', 'false');
+}
+
+// ============================================================
+// 7. SPRITE SVG
+// ============================================================
+function spriteSVG(key, size) {
+  const rows = SPRITES[key] || SPRITES.heart;
+  const h = rows.length, w = rows[0].length;
+  let rects = '';
+  for (let r = 0; r < h; r++) {
+    for (let c = 0; c < w; c++) {
+      const code = CHAR_COLOR_MAP[rows[r][c]];
+      if (!code) continue;
+      const color = PALETTE_MAP[code] ? PALETTE_MAP[code].hex : '#1B1D21';
+      rects += `<rect x="${c}" y="${r}" width="0.92" height="0.92" rx="0.18" fill="${color}"/>`;
+      rects += `<circle cx="${c+0.46}" cy="${r+0.46}" r="0.16" fill="#fafcf7" opacity="0.65"/>`;
+    }
+  }
+  return `<svg width="${size}" height="${size}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${rects}</svg>`;
+}
+
+// ============================================================
+// 8. CATÁLOGO
+// ============================================================
+function setCatalogFilter(cat, btn) {
+  activeFilter = cat;
+  document.querySelectorAll('#catalogo .filter-chip').forEach(c => c.classList.remove('is-active'));
+  if (btn) btn.classList.add('is-active');
+  renderCatalog();
+}
+
+function renderCatalog() {
+  const grid = document.getElementById('catalog-grid');
+  const filtered = CATALOG.filter(p => activeFilter === 'todos' || p.cat === activeFilter);
+  document.getElementById('catalog-count-label').textContent = filtered.length;
+
+  if (!filtered.length) {
+    grid.innerHTML = '<p style="padding:var(--space-lg);">Nenhuma peça nessa categoria.</p>';
+    return;
+  }
+
+  let html = '';
+  filtered.forEach(p => {
+    const tagMod = p.accent === 'gold' ? ' product-cat-tag--gold'
+                : p.accent === 'coral' ? ' product-cat-tag--coral'
+                : p.accent === 'green' ? ' product-cat-tag--green' : '';
+    html += `<article class="product-card">
+      <div class="product-visual">
+        <span class="product-cat-tag${tagMod}">${esc(p.cat)}</span>
+        ${spriteSVG(p.sprite, 130)}
+      </div>
+      <div class="product-body">
+        <h3 class="product-title">${esc(p.name)}</h3>
+        <div class="product-specs">
+          <div class="product-spec-row"><span>Tamanho:</span><strong>${esc(p.size)}</strong></div>
+          <div class="product-spec-row"><span>Acabamento:</span><strong>${esc(p.finish)}</strong></div>
+        </div>
+      </div>
+      <div class="product-footer">
+        <span class="product-price">${brl(p.price)}</span>
+        <button type="button" class="btn btn-sm btn-primary" onclick="addToCart('${p.id}')" aria-label="Adicionar ${esc(p.name)} ao carrinho">
+          <i data-lucide="plus"></i> Adicionar
+        </button>
+      </div>
+    </article>`;
+  });
+  grid.innerHTML = html;
+  if (window.lucide) lucide.createIcons();
+}
+
+// ============================================================
+// 9. SIMULADOR
+// ============================================================
+function loadPreset(name, btn) {
+  simState.preset = name;
+  document.querySelectorAll('#preset-grid .preset-btn').forEach(p => p.classList.remove('is-active'));
+  if (btn) btn.classList.add('is-active');
+  const cap = name.charAt(0).toUpperCase() + name.slice(1);
+  document.getElementById('project-name-input').value = cap + ' Pixel';
+  renderSimulator();
+}
+
+function setGridSize(size, btn) {
+  simState.grid = size;
+  document.querySelectorAll('[data-grid]').forEach(b => b.classList.remove('is-active'));
+  if (btn) btn.classList.add('is-active');
+  renderSimulator();
+}
+
+function setMeltLevel(level, btn) {
+  simState.melt = level;
+  document.querySelectorAll('[data-melt]').forEach(b => b.classList.remove('is-active'));
+  if (btn) btn.classList.add('is-active');
+  renderSimulator();
+}
+
+function setMeltSides(n, btn) {
+  simState.sides = n;
+  document.querySelectorAll('[data-sides]').forEach(b => b.classList.remove('is-active'));
+  if (btn) btn.classList.add('is-active');
+  renderSimulator();
+}
+
+function renderSimulator() {
+  const canvas = document.getElementById('bead-canvas');
+  const ctx = canvas.getContext('2d');
+  const rows = SPRITES[simState.preset] || SPRITES.heart;
+  const h = rows.length, w = rows[0].length;
+  const grid = simState.grid;
+  const cell = Math.floor(canvas.width / grid);
+  const offsetX = Math.floor((grid - w) / 2);
+  const offsetY = Math.floor((grid - h) / 2);
+
+  ctx.fillStyle = '#fafcf7';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.strokeStyle = '#e4ebdd';
+  ctx.lineWidth = 1;
+  for (let i = 0; i <= grid; i++) {
+    ctx.beginPath(); ctx.moveTo(i*cell, 0); ctx.lineTo(i*cell, canvas.height); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0, i*cell); ctx.lineTo(canvas.width, i*cell); ctx.stroke();
+  }
+
+  const counts = {};
+  for (let r = 0; r < h; r++) {
+    for (let c = 0; c < w; c++) {
+      const code = CHAR_COLOR_MAP[rows[r][c]];
+      if (!code) continue;
+      const gx = (c + offsetX) * cell;
+      const gy = (r + offsetY) * cell;
+      const color = PALETTE_MAP[code] ? PALETTE_MAP[code].hex : '#1B1D21';
+      ctx.fillStyle = color;
+      ctx.fillRect(gx+1, gy+1, cell-2, cell-2);
+      ctx.fillStyle = '#fafcf7';
+      ctx.beginPath();
+      ctx.arc(gx + cell/2, gy + cell/2, Math.max(1, cell*0.15), 0, Math.PI*2);
+      ctx.fill();
+      counts[code] = (counts[code] || 0) + 1;
+    }
+  }
+
+  if (simState.melt === 'media') {
+    ctx.fillStyle = 'rgba(255,255,255,0.08)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  } else if (simState.melt === 'completa') {
+    ctx.fillStyle = 'rgba(255,255,255,0.18)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+
+  const total = Object.values(counts).reduce((a,b) => a+b, 0);
+  const sizeCm = (Math.max(w, h) * simState.bead / 10).toFixed(1);
+  const estimatedPrice = calcularPrecoSimulado(total, document.getElementById('project-purpose-select').value);
+
+  document.getElementById('sim-total-beads').textContent = total;
+  document.getElementById('sim-dimensions').textContent = sizeCm + ' × ' + sizeCm + ' cm';
+  document.getElementById('sim-time-est').textContent = Math.max(15, Math.round(total * 0.5)) + ' min';
+  document.getElementById('sim-suggested-price').textContent = brl(estimatedPrice);
+
+  const tbody = document.getElementById('sim-color-tbody');
+  tbody.innerHTML = '';
+  Object.keys(counts).sort((a,b) => counts[b]-counts[a]).forEach(code => {
+    const p = PALETTE_MAP[code];
+    if (!p) return;
+    tbody.innerHTML += `<tr>
+      <td><span style="display:inline-block;width:18px;height:18px;background:${p.hex};border:2px solid #1a2416;vertical-align:middle;"></span></td>
+      <td>${esc(p.name)}</td>
+      <td class="num-cell">${counts[code]}</td>
+    </tr>`;
+  });
+}
+
+// Fórmula realista: 25/h + material + margem 50% + arredonda 0,50
+function calcularPrecoSimulado(beads, purpose) {
+  const hardwareCost = {
+    chaveiro: 1.50, ima: 1.50, brinco: 2.50,
+    marcador: 0.80, portacopo: 2.50, quadro: 8.00
+  }[purpose] || 1.50;
+  const baseMinutes = {
+    chaveiro: 30, ima: 25, brinco: 25,
+    marcador: 20, portacopo: 45, quadro: 120
+  }[purpose] || 30;
+
+  // Tempo proporcional ao número de contas
+  const timeMin = Math.max(baseMinutes, beads * 0.25);
+  const beadsCost = (beads / 1000) * 15 * 1.10; // R$ 15/1000 + 10% reserva
+  const labor = (timeMin / 60) * 25; // R$ 25/h
+  const baseCost = beadsCost + hardwareCost + labor;
+  const withMargin = baseCost * 1.5;
+  return Math.ceil(withMargin * 2) / 2;
+}
+
+function addSimProjectToCart() {
+  const name = (document.getElementById('project-name-input').value || 'Peça personalizada').trim();
+  const purpose = document.getElementById('project-purpose-select').value;
+  const rows = SPRITES[simState.preset] || SPRITES.heart;
+  const count = rows.reduce((a, row) => a + row.split('').filter(ch => CHAR_COLOR_MAP[ch]).length, 0);
+  const price = calcularPrecoSimulado(count, purpose);
+  const purposeLabel = {
+    chaveiro:'Chaveiro', ima:'Ímã', brinco:'Par de brincos',
+    marcador:'Marcador', portacopo:'Porta-copo', quadro:'Quadro'
+  }[purpose] || purpose;
+
+  cart.push({
+    id: 'sim-' + Date.now(),
+    name: name + ' (' + purposeLabel + ')',
+    price: price,
+    meta: `${simState.grid}×${simState.grid} · Mini 2,6 mm · fusão ${simState.melt} · ${simState.sides} lado(s)`,
+    count: count
+  });
+  saveCart();
+  renderCart();
+  showToast('Molde adicionado ao carrinho.');
+}
+
+// ============================================================
+// 10. CARRINHO
+// ============================================================
+function saveCart() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({
+      cart: cart, payment: paymentMethod, notes: document.getElementById('order-notes')?.value || ''
+    }));
+  } catch (e) {}
+}
+
+function loadCart() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    if (Array.isArray(data.cart)) cart = data.cart;
+    if (data.payment === 'pix' || data.payment === 'card') paymentMethod = data.payment;
+    const notesEl = document.getElementById('order-notes');
+    if (notesEl && typeof data.notes === 'string') notesEl.value = data.notes;
+  } catch (e) {}
+}
+
+function addToCart(id) {
+  const p = CATALOG.find(x => x.id === id);
+  if (!p) return;
+  cart.push({ id: p.id + '-' + Date.now(), name: p.name, price: p.price, meta: p.size + ' · ' + p.finish });
+  saveCart();
+  renderCart();
+  showToast(p.name + ' adicionado.');
+}
+
+function removeFromCart(idx) {
+  cart.splice(idx, 1);
+  saveCart();
+  renderCart();
+}
+
+function setPaymentMethod(method) {
+  paymentMethod = method;
+  document.getElementById('pay-pix-btn').classList.toggle('is-active', method === 'pix');
+  document.getElementById('pay-card-btn').classList.toggle('is-active', method === 'card');
+  saveCart();
+  renderCart();
+}
+
+function renderCart() {
+  document.getElementById('header-cart-count').textContent = cart.length;
+  document.getElementById('drawer-cart-count').textContent = cart.length;
+
+  const empty = document.getElementById('cart-empty-state');
+  const list = document.getElementById('cart-items-list');
+  const footer = document.getElementById('cart-drawer-footer');
+  const options = document.getElementById('cart-options-block');
+
+  if (!cart.length) {
+    empty.style.display = 'block';
+    list.innerHTML = '';
+    footer.style.display = 'none';
+    options.style.display = 'none';
+    freteSelecionado = null;
+    return;
+  }
+
+  empty.style.display = 'none';
+  footer.style.display = 'flex';
+  options.style.display = 'flex';
+
+  let html = '';
+  cart.forEach((item, i) => {
+    html += `<div class="cart-item-card">
+      <div class="cart-item-top">
+        <div>
+          <strong>${esc(item.name)}</strong>
+          <div class="cart-item-meta">${esc(item.meta)}</div>
+        </div>
+        <button type="button" class="btn btn-sm btn-secondary" onclick="removeFromCart(${i})" aria-label="Remover ${esc(item.name)}">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="cart-item-bottom">
+        <span style="font-family:var(--font-headline); font-weight:700;">${brl(item.price)}</span>
+      </div>
+    </div>`;
+  });
+  list.innerHTML = html;
+
+  const subtotal = cart.reduce((a,it) => a + it.price, 0);
+  const discount = paymentMethod === 'pix' ? subtotal * 0.05 : 0;
+  const frete = freteSelecionado ? freteSelecionado.valor : 0;
+  const total = subtotal - discount + frete;
+
+  document.getElementById('cart-subtotal-val').textContent = brl(subtotal);
+  document.getElementById('cart-discount-val').textContent = '- ' + brl(discount);
+  const shipRow = document.getElementById('cart-shipping-row');
+  if (freteSelecionado) {
+    shipRow.style.display = 'flex';
+    document.getElementById('cart-shipping-val').textContent = brl(frete);
+  } else {
+    shipRow.style.display = 'none';
+  }
+  document.getElementById('cart-final-val').textContent = brl(total);
+
+  const notes = document.getElementById('order-notes').value.trim();
+  let msg = '*Pedido — Cannu Fuse Beads*\n\n';
+  cart.forEach((it, i) => {
+    msg += `${i+1}. ${it.name} — ${brl(it.price)}\n   ${it.meta}\n`;
+  });
+  msg += `\nSubtotal: ${brl(subtotal)}\n`;
+  if (paymentMethod === 'pix') msg += `Desconto Pix (5%): - ${brl(discount)}\n`;
+  if (freteSelecionado) msg += `Frete (${freteSelecionado.nome}): ${brl(frete)}\n   Prazo: ${freteSelecionado.prazo}\n`;
+  msg += `*Total: ${brl(total)}* (${paymentMethod === 'pix' ? 'Pix' : 'Cartão'})\n`;
+  if (notes) msg += `\nObservações: ${notes}\n`;
+  msg += `\nPrazo de produção: até 5 dias úteis. Aguardo confirmação.`;
+  document.getElementById('whatsapp-message-preview').textContent = msg;
+  document.getElementById('whatsapp-open-link').href = 'https://wa.me/' + WHATS + '?text=' + encodeURIComponent(msg);
+
+  if (window.lucide) lucide.createIcons();
+}
+
+function openCartDrawer() {
+  document.getElementById('cart-drawer').classList.add('is-open');
+  document.getElementById('cart-backdrop').classList.add('is-open');
+  document.getElementById('cart-drawer').setAttribute('aria-hidden','false');
+}
+function closeCartDrawer() {
+  document.getElementById('cart-drawer').classList.remove('is-open');
+  document.getElementById('cart-backdrop').classList.remove('is-open');
+  document.getElementById('cart-drawer').setAttribute('aria-hidden','true');
+}
+
+function copyWhatsAppMessage() {
+  const txt = document.getElementById('whatsapp-message-preview').textContent;
+  navigator.clipboard.writeText(txt)
+    .then(() => showToast('Mensagem copiada.'))
+    .catch(() => showToast('Não foi possível copiar.'));
+}
+
+// ============================================================
+// 11. FRETE (ViaCEP + tabela por região)
+// ============================================================
+const TABELA_FRETE = [
+  { regiao:'Sudeste', ufs:['SP','RJ','MG','ES'], opcoes:[
+    {nome:'PAC', prazo:'4 a 7 dias úteis', valor:18},
+    {nome:'SEDEX', prazo:'2 a 4 dias úteis', valor:28}
+  ]},
+  { regiao:'Sul', ufs:['PR','SC','RS'], opcoes:[
+    {nome:'PAC', prazo:'5 a 8 dias úteis', valor:20},
+    {nome:'SEDEX', prazo:'3 a 5 dias úteis', valor:32}
+  ]},
+  { regiao:'Centro-Oeste', ufs:['GO','MT','MS','DF'], opcoes:[
+    {nome:'PAC', prazo:'6 a 9 dias úteis', valor:22},
+    {nome:'SEDEX', prazo:'4 a 6 dias úteis', valor:35}
+  ]},
+  { regiao:'Nordeste', ufs:['BA','SE','AL','PE','PB','RN','CE','PI','MA'], opcoes:[
+    {nome:'PAC', prazo:'8 a 12 dias úteis', valor:25},
+    {nome:'SEDEX', prazo:'5 a 8 dias úteis', valor:40}
+  ]},
+  { regiao:'Norte', ufs:['AM','RR','AP','PA','TO','RO','AC'], opcoes:[
+    {nome:'PAC', prazo:'10 a 15 dias úteis', valor:30},
+    {nome:'SEDEX', prazo:'7 a 10 dias úteis', valor:48}
+  ]}
+];
+
+function mascaraCEP(input) {
+  let v = input.value.replace(/\D/g,'');
+  if (v.length > 5) v = v.slice(0,5) + '-' + v.slice(5,8);
+  input.value = v;
+}
+
+async function simularFrete() {
+  const cepRaw = document.getElementById('cep-input').value.replace(/\D/g,'');
+  const info = document.getElementById('cep-info');
+  const resultado = document.getElementById('frete-resultado');
+  resultado.innerHTML = '';
+  freteSelecionado = null;
+  renderCart();
+
+  if (cepRaw.length !== 8) {
+    info.textContent = 'Digite um CEP válido com 8 números.';
+    info.style.color = 'var(--secondary)';
+    return;
+  }
+  info.textContent = 'Buscando CEP...';
+  info.style.color = 'var(--ink-var)';
+
+  try {
+    const resp = await fetch(`https://viacep.com.br/ws/${cepRaw}/json/`);
+    const data = await resp.json();
+    if (data.erro) {
+      info.textContent = 'CEP não encontrado.';
+      info.style.color = 'var(--secondary)';
+      return;
+    }
+    info.innerHTML = `<strong>${esc(data.localidade)} — ${esc(data.uf)}</strong>`;
+    info.style.color = 'var(--ink)';
+
+    const faixa = TABELA_FRETE.find(f => f.ufs.includes(data.uf));
+    if (!faixa) {
+      resultado.innerHTML = '<p style="font-size:0.85rem;">Região não atendida. Fale pelo WhatsApp.</p>';
+      return;
+    }
+
+    let html = '';
+    faixa.opcoes.forEach((op, i) => {
+      html += `<label class="shipping-opt">
+        <input type="radio" name="frete-opt" value="${i}" onchange="selecionarFrete('${faixa.regiao}','${op.nome}',${op.valor},'${op.prazo}')">
+        <span class="shipping-opt-body">
+          <strong>${op.nome}</strong>
+          <small>${op.prazo}</small>
+        </span>
+        <span class="shipping-opt-valor">${brl(op.valor)}</span>
+      </label>`;
+    });
+    resultado.innerHTML = html;
+  } catch (e) {
+    info.textContent = 'Erro ao buscar CEP. Tente novamente.';
+    info.style.color = 'var(--secondary)';
+  }
+}
+
+function selecionarFrete(regiao, nome, valor, prazo) {
+  freteSelecionado = { regiao, nome, valor, prazo };
+  renderCart();
+}
+
+// ============================================================
+// 12. COLOR DIALOG
+// ============================================================
+function openColorDialog() {
+  const grid = document.getElementById('color-ref-grid');
+  let html = '';
+  PALETTE.forEach(c => {
+    html += `<div class="color-ref-card">
+      <div class="color-ref-swatch" style="background:${c.hex};">
+        ${c.essential ? '<span class="essential-badge">Essencial</span>' : ''}
+      </div>
+      <div class="color-ref-info">
+        <span class="color-ref-code">${esc(c.name)}</span>
+        <span class="color-ref-sku">${esc(c.code)}</span>
+      </div>
+    </div>`;
+  });
+  grid.innerHTML = html;
+  document.getElementById('color-dialog').showModal();
+}
+function closeColorDialog() {
+  document.getElementById('color-dialog').close();
+}
+
+// ============================================================
+// 13. INIT
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  loadCart();
+  renderCatalog();
+  renderSimulator();
+  renderCart();
+  if (window.lucide) lucide.createIcons();
+});
+</script>
+
+</body>
+</html>
